@@ -73,7 +73,7 @@ body {
 .ig-bar  { height:2px; flex:1; background:rgba(8,145,178,0.18); border-radius:2px; overflow:hidden; }
 .ig-fill {
   height:100%; background:#0891B2; border-radius:2px;
-  animation: fill 13s linear forwards;
+  animation: fill 8.5s linear forwards; /* Changed from 13s to 8.5s */
 }
 @keyframes fill { from{width:0%} to{width:100%} }
 
@@ -145,9 +145,9 @@ body {
   opacity:0;
 }
 
-.s1 { animation: sIn 3.8s ease forwards 0.6s; }
-.s2 { animation: sIn 3.8s ease forwards 4.4s; }
-.s3 { animation: sStay 5s ease forwards 8.2s; }
+.s1 { animation: sIn 2.5s ease forwards 0.4s; } 
+.s2 { animation: sIn 2.5s ease forwards 2.9s; } 
+.s3 { animation: sStay 5s ease forwards 5.4s; }
 
 @keyframes sIn {
   0%   {opacity:0; transform:translateY(14px)}
@@ -240,7 +240,7 @@ body {
   border:1px solid rgba(13,148,136,0.2);
   opacity:0;
   transform:translateY(10px);
-  animation:cardUp 0.7s cubic-bezier(.34,1.56,.64,1) forwards 9.4s;
+  animation:cardUp 0.7s cubic-bezier(.34,1.56,.64,1) forwards 6.2s; /* Was 9.4s */
 }
 @keyframes cardUp { to{opacity:1;transform:translateY(0)} }
 
@@ -315,16 +315,16 @@ body {
   padding-bottom:24px;
   background: linear-gradient(to top, rgba(226,232,240,0.92) 0%, transparent 100%);
   opacity:0;
-  animation:fadeIn 1s ease forwards 11s;
-  cursor: pointer; /* Added for desktop fallback */
-  z-index: 50; /* Ensure it stays on top to catch clicks/swipes */
+  cursor: pointer;
+  z-index: 50;
+  animation:fadeIn 1s ease forwards 7.5s; /* Was 11s */
 }
 @keyframes fadeIn{to{opacity:1}}
 
 .swipe-arrows {
   display:flex; flex-direction:column;
   align-items:center; gap:1px;
-  animation: bounceUp 1.3s ease-in-out infinite 11.2s;
+  animation: bounceUp 1.3s ease-in-out infinite 7.7s; /* Was 11.2s */
 }
 @keyframes bounceUp{0%,100%{transform:translateY(0)}50%{transform:translateY(-5px)}}
 
