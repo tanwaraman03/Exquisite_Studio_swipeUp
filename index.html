@@ -53,6 +53,7 @@ body {
   border-radius: 40px;
   overflow: hidden;
   background: #F8FAFC;
+  pointer-events: auto; /* ⬅️ ADD THIS LINE */
 }
 
 /* Side buttons */
@@ -443,7 +444,7 @@ body {
             <div class="quiz-opt">Dryness</div>
             <div class="quiz-opt">Body care</div>
           </div>
-          <a href="https://exquisite-studio-lead-magnet.vercel.app/" class="cta-btn">Start My Assessment →</a>
+          <a href="https://exquisite-studio-lead-magnet.vercel.app/" id="start-btn" class="cta-btn" style="position: relative; z-index: 100;">Start My Assessment →</a>
         </div>
       </div>
 
@@ -509,6 +510,12 @@ body {
   // Fallback: Make it clickable for desktop users
   swipeContainer.addEventListener('click', function() {
     window.location.href = targetUrl;
+  });
+</script>
+  <script>
+  document.getElementById('start-btn').addEventListener('click', function(event) {
+    event.preventDefault(); // Prevents any default glitching
+    window.location.href = "https://exquisite-studio-lead-magnet.vercel.app/";
   });
 </script>
 </body>
